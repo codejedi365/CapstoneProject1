@@ -1,0 +1,53 @@
+Name:               rainfall-predictor-6cd5fdcdbd-vq5kd
+Namespace:          default
+Priority:           0
+PriorityClassName:  <none>
+Node:               gke-high-cpu-cluster-1-default-pool-13439d1a-jf19/10.128.0.5
+Start Time:         Sun, 22 Sep 2019 17:54:43 -0500
+Labels:             app=rainfall-predictor
+                    pod-template-hash=6cd5fdcdbd
+Annotations:        <none>
+Status:             Running
+IP:                 10.36.0.10
+Controlled By:      ReplicaSet/rainfall-predictor-6cd5fdcdbd
+Containers:
+  rainfalld:
+    Container ID:   docker://4148d474406e0e28f0aecbf6cc41c10579b2e2550d4c2838d8e9c0f2ef5611e6
+    Image:          gcr.io/rainfall-estimation/rainfall-predictor:v1.1
+    Image ID:       docker-pullable://gcr.io/rainfall-estimation/rainfall-predictor@sha256:ef294bc02a9f2190efc9ed0caa20e639d0b80729a5ec0f03471c7cabac82e2bb
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sun, 22 Sep 2019 17:55:53 -0500
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     3200m
+      memory:  600M
+    Requests:
+      cpu:        3
+      memory:     400M
+    Environment:  <none>
+    Mounts:
+      /var/cache/rainfall-predictor from rainfall-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-2rblp (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  rainfall-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  rainfall-predictor-volclaim
+    ReadOnly:   false
+  default-token-2rblp:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-2rblp
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>

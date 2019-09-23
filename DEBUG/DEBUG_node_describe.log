@@ -1,0 +1,89 @@
+Name:               gke-high-cpu-cluster-1-default-pool-13439d1a-jf19
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/fluentd-ds-ready=true
+                    beta.kubernetes.io/instance-type=n1-highcpu-4
+                    beta.kubernetes.io/os=linux
+                    cloud.google.com/gke-nodepool=default-pool
+                    cloud.google.com/gke-os-distribution=cos
+                    failure-domain.beta.kubernetes.io/region=us-central1
+                    failure-domain.beta.kubernetes.io/zone=us-central1-a
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=gke-high-cpu-cluster-1-default-pool-13439d1a-jf19
+                    kubernetes.io/os=linux
+Annotations:        container.googleapis.com/instance_id: 4664779431383549420
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Sun, 22 Sep 2019 17:54:22 -0500
+Taints:             <none>
+Unschedulable:      false
+Conditions:
+  Type                          Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                          ------  -----------------                 ------------------                ------                       -------
+  KernelDeadlock                False   Sun, 22 Sep 2019 22:02:28 -0500   Sun, 22 Sep 2019 17:52:15 -0500   KernelHasNoDeadlock          kernel has no deadlock
+  ReadonlyFilesystem            False   Sun, 22 Sep 2019 22:02:28 -0500   Sun, 22 Sep 2019 17:52:15 -0500   FilesystemIsNotReadOnly      Filesystem is not read-only
+  FrequentUnregisterNetDevice   False   Sun, 22 Sep 2019 22:02:28 -0500   Sun, 22 Sep 2019 17:57:16 -0500   UnregisterNetDevice          node is functioning properly
+  FrequentKubeletRestart        False   Sun, 22 Sep 2019 22:02:28 -0500   Sun, 22 Sep 2019 17:57:16 -0500   FrequentKubeletRestart       kubelet is functioning properly
+  FrequentDockerRestart         False   Sun, 22 Sep 2019 22:02:28 -0500   Sun, 22 Sep 2019 17:57:17 -0500   FrequentDockerRestart        docker is functioning properly
+  FrequentContainerdRestart     False   Sun, 22 Sep 2019 22:02:28 -0500   Sun, 22 Sep 2019 17:57:19 -0500   FrequentContainerdRestart    containerd is functioning properly
+  CorruptDockerOverlay2         False   Sun, 22 Sep 2019 22:02:28 -0500   Sun, 22 Sep 2019 17:57:16 -0500   CorruptDockerOverlay2        docker overlay2 is functioning properly
+  NetworkUnavailable            False   Sun, 22 Sep 2019 17:54:22 -0500   Sun, 22 Sep 2019 17:54:22 -0500   RouteCreated                 NodeController create implicit route
+  MemoryPressure                False   Sun, 22 Sep 2019 22:02:21 -0500   Sun, 22 Sep 2019 17:54:22 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure                  False   Sun, 22 Sep 2019 22:02:21 -0500   Sun, 22 Sep 2019 17:54:22 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure                   False   Sun, 22 Sep 2019 22:02:21 -0500   Sun, 22 Sep 2019 17:54:22 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                         True    Sun, 22 Sep 2019 22:02:21 -0500   Sun, 22 Sep 2019 17:54:22 -0500   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:   10.128.0.5
+  ExternalIP:   35.232.7.22
+  InternalDNS:  gke-high-cpu-cluster-1-default-pool-13439d1a-jf19.us-central1-a.c.rainfall-estimation.internal
+  Hostname:     gke-high-cpu-cluster-1-default-pool-13439d1a-jf19.us-central1-a.c.rainfall-estimation.internal
+Capacity:
+ attachable-volumes-gce-pd:  128
+ cpu:                        4
+ ephemeral-storage:          16293736Ki
+ hugepages-2Mi:              0
+ memory:                     3630756Ki
+ pods:                       110
+Allocatable:
+ attachable-volumes-gce-pd:  128
+ cpu:                        3920m
+ ephemeral-storage:          4278888833
+ hugepages-2Mi:              0
+ memory:                     2585252Ki
+ pods:                       110
+System Info:
+ Machine ID:                 9ff3898cd3bbda799ba780f377356eca
+ System UUID:                9FF3898C-D3BB-DA79-9BA7-80F377356ECA
+ Boot ID:                    ecee2178-bf26-4cb9-b9ad-b2ffc596a2d1
+ Kernel Version:             4.14.137+
+ OS Image:                   Container-Optimized OS from Google
+ Operating System:           linux
+ Architecture:               amd64
+ Container Runtime Version:  docker://18.9.7
+ Kubelet Version:            v1.14.3-gke.11
+ Kube-Proxy Version:         v1.14.3-gke.11
+PodCIDR:                     10.36.0.0/24
+ProviderID:                  gce://rainfall-estimation/us-central1-a/gke-high-cpu-cluster-1-default-pool-13439d1a-jf19
+Non-terminated Pods:         (11 in total)
+  Namespace                  Name                                                            CPU Requests  CPU Limits   Memory Requests  Memory Limits  AGE
+  ---------                  ----                                                            ------------  ----------   ---------------  -------------  ---
+  default                    rainfall-predictor-6cd5fdcdbd-vq5kd                             3 (76%)       3200m (81%)  400M (15%)       600M (22%)     4h7m
+  kube-system                event-exporter-v0.2.4-7c8896bbb8-2xdr6                          0 (0%)        0 (0%)       0 (0%)           0 (0%)         4h8m
+  kube-system                fluentd-gcp-scaler-6965bb45c9-2sc7w                             0 (0%)        0 (0%)       0 (0%)           0 (0%)         4h8m
+  kube-system                fluentd-gcp-v3.2.0-qrxt6                                        100m (2%)     1 (25%)      200Mi (7%)       500Mi (19%)    4h7m
+  kube-system                heapster-v1.6.1-87478cbd-kv4k7                                  63m (1%)      63m (1%)     215440Ki (8%)    215440Ki (8%)  4h7m
+  kube-system                kube-dns-5877696fb4-h2bbw                                       260m (6%)     0 (0%)       110Mi (4%)       170Mi (6%)     4h8m
+  kube-system                kube-dns-autoscaler-57d56b4f56-cxclp                            20m (0%)      0 (0%)       10Mi (0%)        0 (0%)         4h8m
+  kube-system                kube-proxy-gke-high-cpu-cluster-1-default-pool-13439d1a-jf19    100m (2%)     0 (0%)       0 (0%)           0 (0%)         4h8m
+  kube-system                metrics-server-v0.3.1-8d4c5db46-9xg88                           48m (1%)      143m (3%)    105Mi (4%)       355Mi (14%)    4h7m
+  kube-system                network-metering-agent-9sq6d                                    0 (0%)        0 (0%)       0 (0%)           0 (0%)         4h8m
+  kube-system                prometheus-to-sd-pp8vd                                          1m (0%)       3m (0%)      20Mi (0%)        20Mi (0%)      4h8m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource                   Requests          Limits
+  --------                   --------          ------
+  cpu                        3592m (91%)       4409m (112%)
+  memory                     1087226880 (41%)  1916372480 (72%)
+  ephemeral-storage          0 (0%)            0 (0%)
+  attachable-volumes-gce-pd  0                 0
+Events:                      <none>
